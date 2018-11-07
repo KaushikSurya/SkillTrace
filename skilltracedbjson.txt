@@ -1,0 +1,239 @@
+[
+    {
+        "employeeId": 1,
+        "employeeName": "Jyothsna",
+        "department": "VES",
+        "designation": "DEVELOPER",
+        "emailId": "jyothsna@gmail.com",
+        "mobileNumber": "9988776655",
+        "company": "VDSI Hyderabad"
+    },
+    {
+        "employeeId": 2,
+        "employeeName": "Navneet",
+        "department": "VCM",
+        "designation": "DEVELOPER",
+        "emailId": "devnav@gmail.com",
+        "mobileNumber": "9922334455",
+        "company": "VDSI Hyderabad"
+    },
+    {
+        "employeeId": 3,
+        "employeeName": "Kaushik",
+        "department": "GTS",
+        "designation": "SOFTWARE_ENGINEER",
+        "emailId": "kaushik@gmail.com",
+        "mobileNumber": "9968793456",
+        "company": "VDSI Hyderabad"
+    },
+    {
+        "employeeId": 4,
+        "employeeName": "Devesh",
+        "department": "VCM",
+        "designation": "DEVELOPER",
+        "emailId": "devesh@gmail.com",
+        "mobileNumber": "8899112233",
+        "company": "VDSI Chennai"
+    },
+    {
+        "employeeId": 5,
+        "employeeName": "BVG Krishna",
+        "department": "RD",
+        "designation": "DESIGNER",
+        "emailId": "krishna@gmail.com",
+        "mobileNumber": "8285672345",
+        "company": "VDSI Bangalore"
+    }
+]
+
+
+
+
+
+[
+    {
+        "employeeSkillsId": 1,
+        "employeeId": 1,
+        "employeeName": "Jyothsna",
+        "skillId": 1,
+        "skillName": "Java",
+        "level": 9
+    },
+    {
+        "employeeSkillsId": 2,
+        "employeeId": 1,
+        "employeeName": "Jyothsna",
+        "skillId": 2,
+        "skillName": "Python",
+        "level": 8
+    },
+    {
+        "employeeSkillsId": 3,
+        "employeeId": 1,
+        "employeeName": "Jyothsna",
+        "skillId": 3,
+        "skillName": "CPP",
+        "level": 8
+    },
+    {
+        "employeeSkillsId": 4,
+        "employeeId": 2,
+        "employeeName": "Navneet",
+        "skillId": 1,
+        "skillName": "Java",
+        "level": 9
+    },
+    {
+        "employeeSkillsId": 5,
+        "employeeId": 2,
+        "employeeName": "Navneet",
+        "skillId": 2,
+        "skillName": "Python",
+        "level": 8
+    },
+    {
+        "employeeSkillsId": 6,
+        "employeeId": 2,
+        "employeeName": "Navneet",
+        "skillId": 3,
+        "skillName": "CPP",
+        "level": 8
+    },
+    {
+        "employeeSkillsId": 7,
+        "employeeId": 3,
+        "employeeName": "Kaushik",
+        "skillId": 1,
+        "skillName": "Java",
+        "level": 7
+    },
+    {
+        "employeeSkillsId": 8,
+        "employeeId": 3,
+        "employeeName": "Kaushik",
+        "skillId": 3,
+        "skillName": "CPP",
+        "level": 8
+    },
+    {
+        "employeeSkillsId": 9,
+        "employeeId": 4,
+        "employeeName": "Devesh",
+        "skillId": 1,
+        "skillName": "Java",
+        "level": 8
+    },
+    {
+        "employeeSkillsId": 10,
+        "employeeId": 4,
+        "employeeName": "Devesh",
+        "skillId": 2,
+        "skillName": "Python",
+        "level": 7
+    },
+    {
+        "employeeSkillsId": 11,
+        "employeeId": 5,
+        "employeeName": "BVG Krishna",
+        "skillId": 2,
+        "skillName": "Python",
+        "level": 8
+    }
+]
+
+
+
+[
+    {
+        "skillId": 1,
+        "skillName": "Java",
+        "score": 9.5,
+        "specialization": "BACK_END"
+    },
+    {
+        "skillId": 2,
+        "skillName": "Python",
+        "score": 7,
+        "specialization": "BACK_END"
+    },
+    {
+        "skillId": 3,
+        "skillName": "CPP",
+        "score": 7,
+        "specialization": "BACK_END"
+    },
+    {
+        "skillId": 4,
+        "skillName": "ANGULAR",
+        "score": 10,
+        "specialization": "FRONT_END"
+    },
+    {
+        "skillId": 5,
+        "skillName": "REACT",
+        "score": 8,
+        "specialization": "FRONT_END"
+    },
+    {
+        "skillId": 6,
+        "skillName": "Spring",
+        "score": 9,
+        "specialization": "MIDDLEWARE"
+    },
+    {
+        "skillId": 7,
+        "skillName": "node.js",
+        "score": 7,
+        "specialization": "MIDDLEWARE"
+    },
+    {
+        "skillId": 8,
+        "skillName": "Machine Learning",
+        "score": 8,
+        "specialization": "ARTIFICIAL_INTELLIGENCE"
+    }
+]
+
+
+[
+    {
+        "requestId": 1,
+        "employeeId": 1,
+        "employeeName": "Jyothsna",
+        "skillRequestedId": 7,
+        "skillRequestedName": "node.js",
+        "status": "PENDING"
+    },
+    {
+        "requestId": 2,
+        "employeeId": 2,
+        "employeeName": "Navneet",
+        "skillRequestedId": 8,
+        "skillRequestedName": "Machine Learning",
+        "status": "PENDING"
+    },
+    {
+        "requestId": 3,
+        "employeeId": 3,
+        "employeeName": "Kaushik",
+        "skillRequestedId": 5,
+        "skillRequestedName": "REACT",
+        "status": "PENDING"
+    },
+    {
+        "requestId": 4,
+        "employeeId": 4,
+        "employeeName": "Devesh",
+        "skillRequestedId": 6,
+        "skillRequestedName": "Spring",
+        "status": "REJECTED"
+    },
+    {
+        "requestId": 5,
+        "employeeId": 5,
+        "employeeName": "BVG Krishna",
+        "skillRequestedId": 7,
+        "skillRequestedName": "node.js",
+        "status": "APPROVED"
+    }
+]
