@@ -1,0 +1,16 @@
+.mycard{
+    text-align: left;
+    background-color:white;
+}
+.mybtn{
+    font-size: 20px !important;
+    background-color:#222222;
+}
+.cardhead{
+    font-size:28px;
+
+}
+.cardbody{
+    font-size:18px !important;
+    font-weight:bold;
+}

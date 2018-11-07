@@ -1,0 +1,19 @@
+<div class="container shadow-lg w3-light-gray rounded" style="padding:20px;">
+    <h3 class="mb-5 ml-5 text-dark" ><br>
+      <fa name="graduation-cap text-dark"></fa>.  My Skills<hr>
+    </h3>
+    <div class="container">
+  <div class="row">
+  <div  *ngFor="let s of skills">
+    <div class="col-sm" >
+      <div class="shadow-lg card-counter p-3 card border-0 m-3 primary w3-khaki">
+        
+        <span class="shadow-sm count-name card-heading w3-khaki"> <h4><fa name="code-fork"></fa> {{s.skillName}}</h4></span>
+        <span class="count-name card-body">Level : {{s.level}} / 10</span>
+    </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>

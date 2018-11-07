@@ -1,0 +1,103 @@
+<br>
+<div class="input-group-prepend">
+    <div class="btn-group" >
+      <button class="btn btn-secondary" (click)="employee()">Add Skill to Employee </button>
+    </div>
+    &nbsp;
+    <div class="btn-group" >
+        <button class="btn btn-secondary" (click)= "Add()">Add New Skill </button>
+      </div>
+</div>   
+<br>
+<br>  
+<div class="bg" [ngStyle]="{'background' : 'url(../../../assets/images/12.jpeg)'}"> 
+<div *ngIf ="emp">
+    <table class="table table-hover"> 
+        <thead class="bg-info">   
+           <tr>     
+                <th>Employee Id</th> 
+                <th>Employee Name</th>
+                <th>Department </th>
+                <th>Company</th> 
+                <th></th>
+           </tr>  
+         </thead>
+         <tbody>  
+             <th scope="row"></th> 
+         <tr *ngFor="let c of employees" >     
+                <td>{{c.employeeId}}</td>
+                <td>{{c.employeeName}}</td>
+                <td>{{c.dept}}</td>
+                <td>{{c.company}}</td> 
+                <td><a  routerLink="../empCourse/{{c.employeeId}}/{{c.employeeName}}"><button class=" btn-info btn-block" >Recommend</button></a></td> 
+        </tr> 
+       </tbody> 
+     </table> 
+</div>
+
+    
+
+
+<div *ngIf= "course">
+  <div class="container mt-2">
+    <div class="row">
+      <div class="col-sm-9 m-auto">
+        <h3 class="mb-5 mt-5"> 
+           New Course Recommend</h3>
+       <form class="form" #f="ngForm" novalidate (ngSubmit)="f.valid && save()">
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  Manager Id
+                </span>
+              </div>
+              <input type="number" class="form-control" id="mid" name="mid" 
+                [(ngModel)]="requestMan.managerId" #mid=ngModel  />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  Manager Name
+                </span>
+              </div>
+              <input type="text" class="form-control" id="mname" name="mname" 
+              [(ngModel)]="requestMan.managerName" #mname=ngModel   />
+              </div>
+          </div>
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  Course Name
+                </span>
+              </div>
+              <input type="text" class="form-control" id="sname" name="sname" 
+              [(ngModel)]="requestMan.courseName" #sname=ngModel   />
+              </div>
+          </div>
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  Course Description
+                </span>
+              </div>
+              <textarea type="text" rows='5' cols='10' class="form-control" id="dname" name="dname" 
+              [(ngModel)]="requestMan.description" #dname=ngModel   ></textarea>
+              </div>
+          </div>
+  
+        
+          <div>
+            <button class="btn btn-block btn-primary" >Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>

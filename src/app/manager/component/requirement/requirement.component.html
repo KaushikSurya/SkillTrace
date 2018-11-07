@@ -1,0 +1,38 @@
+<div class="bg" [ngStyle]="{'background' : 'url(../../../assets/images/10.jpeg)'}">
+<br>
+<form class="form-inline">
+  <div class="input-group">
+    <input type="text" name="skill" [(ngModel)]="skill" placeholder="Enter the Skill" class="form-control" />
+    <div class="input-group-prepend">
+      <div class="btn-group">
+          <a  routerLink="../requirement/{{skill}}"><button class="btn btn-info" >Search</button></a>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
+<!--
+<table class="table" *ngIf="show"> 
+    <thead class="thead-dark">   
+       <tr>     
+            <th>EmployeeId</th>
+            <th>EmployeeName</th>
+            <th>SkillId</th>
+            <th>SkillName</th>
+            <th>Level</th>
+       </tr>  
+     </thead>
+     <tbody >  
+         <th scope="row"></th> 
+     <tr *ngFor="let c of skills">     
+            <td>{{c.requestId}}</td>
+            <td>{{c.employeeId}}</td>
+            <td>{{c.employeeName}}</td>
+            <td>{{c.skillId}}</td>
+            <td>{{c.skillName}}</td>
+            <td>{{c.level}}</td>
+            
+    </tr> 
+   </tbody> 
+ </table>   
+-->

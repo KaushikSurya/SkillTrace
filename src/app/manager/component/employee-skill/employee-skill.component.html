@@ -1,0 +1,75 @@
+<div class="bg" [ngStyle]="{'background' : 'url(../../../assets/images/15.jpeg)'}">
+<div class="container mt-2">
+    <div class="row">
+      <div class="col-sm-9 m-auto" *ngIf="!employee">
+        <h3>
+          Loading
+        </h3>
+      </div>
+      <div class="col-sm-9 m-auto" >
+        <!-- <h3 class="mb-5 mt-5">
+          Employee Detail
+        </h3> -->
+        <br>
+        <br>
+        <br>
+        <div class="card">
+          <div class="card-header bg-secondary">
+            <h5 class="float-left">Employee Id :{{employee.employeeId}}</h5>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-3">
+                <img [src]="empLogo" class="img-fluid" />
+              </div>
+              <div class="col-md-9">
+  
+                <p>
+                  <strong>Name:         </strong>   {{employee.employeeName}}
+                </p>
+                <p>
+                  <strong>Department:</strong>    {{employee.department}}
+                </p>
+                <p>
+                  <strong>Email:</strong>   {{employee.emailId}}
+                </p>
+                <p>
+                  <strong>Mobile Number:</strong>    {{employee.mobileNumber}}     
+                </p>
+                <p>
+                  <strong>Company:</strong>    {{employee.company}}     
+                </p>
+
+                <table class="table"> 
+                    <thead class="bg-info">   
+                       <tr>     
+                            <th>Skill</th> 
+                            <th>Personal Rating</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let s of employeeSkill">
+                        <td *ngIf = "s.employeeId === employee.employeeId">
+                          {{s.skillName}}
+                        </td>
+                        <td *ngIf = "s.employeeId === employee.employeeId">
+                            {{s.level}}
+                          </td>
+
+                      </tr>
+                    </tbody>   
+                  </table>  
+                  <br>  
+                  <p>
+                    <a  routerLink="../../employeeData"><button class="btn btn-info" >Back To Employee Data</button></a>
+                </p>  
+              </div>
+            </div>
+          </div>
+          
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  </div>

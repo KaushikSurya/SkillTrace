@@ -1,0 +1,48 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+ <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+ <div class="bg" [ngStyle]="{'background' : 'url(../../../assets/images/4.jpeg)'}">
+ <div >
+ <div id="PricingTab">
+    <div class="container">
+        <h3>EMPLOYEE DETAILS</h3>
+        
+       
+        <div class="row">
+            <div class="panel panel-primary filterable">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Employees</h3>
+                    
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr class="filters">
+                            <th><input type="text" class="form-control" placeholder="Employee Id" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Employee Name" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Department" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Email" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="MobileNumber" disabled></th>
+                            <th><input type="text" class="form-control" placeholder="Company" disabled></th>
+                            <!-- <th><input type="text" class="form-control" placeholder="skills" disabled></th> -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                        <tr *ngFor="let c of employees"  routerLink="../../manager/employeeSkill/{{c.employeeId}}">
+                          <td>{{c.employeeId}}</td>
+                          <td>{{c.employeeName}}</td>
+                          <td>{{c.department}}</td>
+                          <td>{{c.emailId}}</td>
+                          <td>{{c.mobileNumber}}</td>
+                          <td>{{c.company}}</td> 
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    </div> 
+</div>
+</div>
+  
+    

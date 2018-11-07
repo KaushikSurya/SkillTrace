@@ -1,0 +1,18 @@
+<div class="la">
+  <img src="../../../../assets/images/an8.jpeg">
+
+
+  <form class="col-sm-12" id="searchForm">
+    <div class="form-group col-sm-4 col-sm-offset-4">
+      <div class="input-group input-group-lg center-block">
+        <!-- <input type="text" class="form-control" placeholder="Search" id="srchValue" name="srchValue" [(ngModel)] = "srchValue" #srchValue
+        /> -->
+        <input type="text" name="srchValue" class="form-control" [(ngModel)]="srchValue" required #srch placeholder="Search" />
+        <div class="srch"><img src="../../../../assets/images/search.png"></div>
+        <!-- <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span> -->
+      </div>
+    </div>
+    <button type="submit" class="btn" (click)="doSearch('employee')">Employee Name</button>
+    <button type="submit" class="btn" (click)="doSearch('skill')">Skill Name</button>
+  </form>
+</div>

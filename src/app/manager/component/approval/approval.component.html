@@ -1,0 +1,53 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="bg" [ngStyle]="{'background' : 'url(../../../assets/images/9.jpeg)'}">
+<aside class="profile-card">
+    
+        
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Employee Requests</h3>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+        <div class="col-xs-2 col-sm-2">
+            <img class="img-circle"
+                 src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=50"
+                 alt="User Pic">
+        </div>
+        <div class=" col-md-9 col-lg-9 hidden-xs hidden-sm" >
+            <strong>Request Id :{{request.requestId}}</strong><br>
+            <table class="table table-user-information">
+                <tbody>
+                <tr>
+                    <td>Employee Id:</td>
+                    <td>{{request.employeeId}}</td>
+                </tr>
+                <tr>
+                    <td> Employee Name:</td>
+                    <td>{{request.employeeName}}</td>
+                </tr>
+                <tr>
+                    <td>Skill Id:</td>
+                    <td>{{request.skillId}}</td>
+                </tr>
+                <tr>
+                    <td> Skill/Course :</td>
+                    <td> {{request.skillName}} </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        
+            
+              <button (click)="perform()" class="btn btn-default">
+                  <span class="glyphicon glyphicon-chevron-left"></span> <b>  Accept</b></button>
+        
+        </div>
+        </div>
+    </div>
+
+       
+</aside>
+</div>

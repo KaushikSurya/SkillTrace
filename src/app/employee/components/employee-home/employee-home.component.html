@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <div class="sidebar" data-color="purple" data-image="">
+    <app-sidebar></app-sidebar>
+    <button mat-raised-button class="navbar-toggler" type="button" (click)="sidebarToggle()">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="navbar-toggler-icon icon-bar"></span>
+      <span class="navbar-toggler-icon icon-bar"></span>
+      <span class="navbar-toggler-icon icon-bar"></span>
+    </button>
+    <div class="sidebar-background" style="background-image: url(/assets/images/car7.jpg)"></div>
+  </div>
+
+  <div class="main-panel">
+    <div class="container-main">
+      <nav class="navbar navbar-nav navbar-expand-lg navbar-expand-sm mt-5 bg-light navbar-inverse float-right" style="opacity: 0.7;">
+        <!-- <button class="openbtn" onclick="openNav()">☰ Toggle Sidebar</button> -->
+        <div class="container collapse navbar-collapse">
+          <form class="form-inline my-2 my-lg-0 navbar-form " style="font-size: 16px !important;">
+            <div class="input-group float-right">
+
+              <input type="text" name="srchValue" style="height: 36px;color:black !important;" class="text-dark border border-warning border-2 form-control p-2"
+                [(ngModel)]="srchValue" required #srch placeholder="Skill Name" />
+              <div class="input-group-prepend">
+                <button class="btn text-dark m-0 border-2" style="background-color: #FEBD39;" (click)="doSearch()">
+                  <fa name="search"></fa>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </nav>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

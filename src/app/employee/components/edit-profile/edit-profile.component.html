@@ -1,0 +1,178 @@
+<div class="container shadow-lg w3-light-gray rounded" style="padding:20px;">
+    <h3 class="mb-5 ml-5 text-dark" ><br>
+      <fa name="edit text-dark" class="shadow-lg"></fa> Edit Profile<hr>
+    </h3>
+    <div class="container w3-light-gray shadow-lg">
+       <div class="card w3-light-gray">
+         <div class="card-body w3-light-gray">
+      <form class="form" #f="ngForm" novalidate (ngSubmit)="f.valid && save()">
+
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <fa name="vcard"></fa>
+              </span>
+            </div>
+            <input type="text" class="form-control" id="employeeName" name="employeeName" required 
+              [(ngModel)]="employee.employeeName" #employeeName=ngModel placeholder="employee.employeeName"/>
+          </div>
+        </div>
+<!-- 
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <fa name="user"></fa>
+              </span>
+            </div>
+            <input type="text" class="form-control" id="department" name="department" required minlength="5" maxlength="15"
+              [(ngModel)]="employee.department" #department=ngModel placeholder="employee.department" />
+          </div>
+          <div class="alert alert-danger" *ngIf="(department.errors && (department.touched || department.darty))">
+            <p *ngIf="(department.errors && (department.touched || department.darty))">Please see that Name <strong>
+                <span *ngIf="department.errors.required">is not left blank</span>
+                <span *ngIf="department.errors.minlength">is atleast 5 chars in length</span>
+              </strong>
+            </p>
+
+          </div>
+        </div> -->
+
+        <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <fa name="envelope"></fa>
+                </span>
+              </div>
+              <input type="email" class="form-control" id="emailId" name="emailId" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                [(ngModel)]="employee.emailId" #emailId=ngModel />
+            </div>
+            <div class="alert alert-danger" *ngIf="emailId.errors && (emailId.touched || emailId.darty)">
+              <p>Please see that Email ID <strong>
+                  <span *ngIf="emailId.errors.required">is not left blank</span>
+                  <span *ngIf="emailId.errors.pattern">is of correct format</span>
+                </strong>
+              </p>
+            </div>
+          </div>
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <fa name="phone"></fa>
+              </span>
+            </div>
+            <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" required pattern="\d{10}" [(ngModel)]="employee.mobileNumber"
+              #mobileNumber=ngModel />
+          </div>
+          <div class="alert alert-danger" *ngIf="mobileNumber.errors && (mobileNumber.touched || mobileNumber.darty)">
+            <p>Please see that Mobile Number <strong>
+                <span *ngIf="mobileNumber.errors.required">is not left blank</span>
+                <span *ngIf="mobileNumber.errors.pattern">is exactly 10 digits only</span>
+              </strong>
+            </p>
+          </div>
+        </div>
+
+        
+        <div class="mb-3">
+          <div class="input-group text-dark bg-light rounded">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <fa name="institution"></fa>
+              </span>
+              <pre> </pre>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="department" value="IT" required [(ngModel)]="employee.department"
+                  #department=ngModel />IT
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="department" value="Consumer Services" required [(ngModel)]="employee.department"
+                  #department=ngModel />Consumer Services
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="department" value="Network" required [(ngModel)]="employee.department"
+                  #department=ngModel />Network
+              </label>
+            </div>
+            <div class="form-check-inline">
+              <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="department" value="Wireless Systems" required [(ngModel)]="employee.department"
+                  #department=ngModel />Wireless Systems
+              </label>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="mb-3">
+            <div class="input-group text-dark bg-light rounded">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <fa name="suitcase"></fa>
+                </span>
+                <pre> </pre>
+              </div>
+              <div class="form-check-inline">
+                <label class="form-check-label">
+                  <input type="radio" class="form-check-input" name="designation" value="Developer" required [(ngModel)]="employee.designation"
+                    #designation=ngModel />Developer
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="designation" value="Delivery Head" required [(ngModel)]="employee.designation"
+                    #designation=ngModel />Delivery Head
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="designation" value="Manager" required [(ngModel)]="employee.designation"
+                    #designation=ngModel />Manager
+                </label>
+              </div>
+              <div class="form-check-inline">
+                <label class="form-check-label">
+                    <input type="radio" class="form-check-input" name="designation" value="Supervisor" required [(ngModel)]="employee.designation"
+                    #designation=ngModel />Supervisor
+                </label>
+              </div>
+            </div>
+          </div>
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <fa name="bank"></fa>
+              </span>
+            </div>
+            <input class="form-control" name="company" id="company" [(ngModel)]="employee.company" value="employee.company" #company=ngModel />
+          </div>
+          
+        </div>
+
+        <div>
+          <button class="btn btn-block btn-dark">Save</button>
+          
+        </div>
+      </form>
+    </div>
+    </div>
+
+  
+    
+  </div>
+  <br><br>
+    </div>
+

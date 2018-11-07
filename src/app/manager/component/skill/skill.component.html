@@ -1,0 +1,42 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+       <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+       <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+       <div [ngStyle]="{'background' : 'url(../../../assets/images/6.jpeg)'}">
+       <div id="PricingTab">
+        <div class="container">
+            <h3>SKILL DETAILS</h3>
+            
+            <br>
+            <br>
+            <br>
+            <div class="row">
+                <div class="panel panel-primary filterable">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">SKILLS</h3>
+                        
+                    </div>
+                    
+                    <table class="table">
+                        <thead>
+                            <tr class="filters">
+                                <th><input type="text" class="form-control" placeholder="SkillId" disabled></th>
+                                <th><input type="text" class="form-control" placeholder="Skill Name" disabled></th>
+                                <th><input type="text" class="form-control" placeholder="Specialization" disabled></th>
+                                <th><input type="text" class="form-control" placeholder="Skill Score" disabled></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                            <tr *ngFor="let c of skills">
+                              <td>{{c.skillId}}</td>
+                              <td>{{c.skillName}}</td>
+                              <td>{{c.specialization}}</td>
+                              <td>{{c.score}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </div> 
+      </div>

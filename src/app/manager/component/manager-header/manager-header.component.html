@@ -1,0 +1,32 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+<div class="bg" [ngStyle]="{'background' : 'url(../assets/images/14.jpeg)'}"></div> 
+<nav class="navbar navbar-expand-sm  bg-dark navbar-dark">
+ <a class="navbar-brand" routerLink="/">
+     <img src="../../../../assets/images/skill.png"  style="width:40px"/>{{title}}
+ </a> 
+ <ul class="navbar-nav mr-auto">
+     <li class="nav-item">
+       <a class="nav-link" routerLink="skills">Skills</a>
+     </li>
+     <li class="nav-item">
+         <a class="nav-link" routerLink="employeeData">Employees Data</a>
+     </li>
+     <li class="nav-item">
+       <a class="nav-link" routerLink="requirement">Find By Requirement</a>
+     </li>
+     <li class="nav-item">
+         <a class="nav-link" routerLink="employeeRequest">Employees Requests</a>
+       </li>
+     <li class="nav-item">
+       <a class="nav-link" routerLink="recommendations">Recommendations</a>
+     </li>
+      <li class="nav-item">
+         <a class="nav-link" routerLink="analysis">Analysis</a>
+       </li> 
+       <li class="nav-item">
+        <a class="nav-link" routerLink="">Logout</a>
+      </li> 
+   </ul>
+ </nav>
+
+ <router-outlet></router-outlet>

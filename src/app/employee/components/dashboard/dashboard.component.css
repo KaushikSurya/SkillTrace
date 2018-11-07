@@ -1,0 +1,12 @@
+.carouselimg{
+    height: 100vh !important;
+    width:100% !important;
+}
+.cardhead{
+    font-size: 16px !important;
+    
+}
+.cardimg{
+    height: 300px !important;
+     width: 100% !important;
+}

@@ -1,0 +1,65 @@
+<div class="sidebar-wrapper" id="mySidebar">
+    
+  <div class="logo">
+      <img [src]="logoUrl" style="width:48px;height: 48px;" /><span style="font-size: 25px;font-weight: bold;color: #37B1CC;">{{first}}</span><span
+      style="font-size: 25px;font-weight: bold; color: #FEBD39;">{{second}}</span>
+  </div>
+  <ul class="nav responsive-nav">
+      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> -->
+      <li class="nav-item">
+          <a class="navlinks p-3" routerLink="./">
+            <span>
+              <fa name="home" class="navlinks p-3"></fa> Dashboard
+            </span>
+          </a>
+        </li>
+    <li class="nav-item">
+      <a class="navlinks p-3" routerLink="listSkills">
+          <fa name="graduation-cap navlinks " style="color:#37B1CC !important;"></fa> My Skills
+      </a>
+    </li>
+    <li class="nav-item">
+        <a class="navlinks p-3" routerLink="addSkill">
+          <span>
+            <fa name="plus" class="navlinks p-3"></fa> Add Skill
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+          <a class="navlinks p-3" routerLink="requestSkill">
+            <span>
+              <fa name="paper-plane" class="navlinks p-3"></fa> Request Skill
+            </span>
+          </a>
+        </li>
+        <li class="nav-item">
+            <a class="navlinks p-3" routerLink="contact">
+              <span>
+                <fa name="comments" class="navlinks p-3"></fa> Contact
+              </span>
+            </a>
+          </li>
+          <li class="nav-item">
+              <a class="navlinks p-3" routerLink="editProfile">
+                <span>
+                  <fa name="pencil" class="navlinks p-3"></fa> Edit Profile
+                </span>
+              </a>
+            </li>
+            <li class="nav-item">
+                <a class="navlinks p-3" routerLink="viewReport">
+                  <span>
+                    <fa name="table" class="navlinks p-3"></fa> View Report
+                  </span>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                  <a class="navlinks p-3" (click)="logout()">
+                    <span>
+                      <fa name="sign-out" class="navlinks p-3"></fa> Logout
+                    </span>
+                  </a>
+                </li>
+  </ul>
+</div>

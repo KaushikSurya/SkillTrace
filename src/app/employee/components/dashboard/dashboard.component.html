@@ -1,0 +1,100 @@
+
+<div class="container shadow-lg w3-light-gray text-dark rounded" style="padding:20px;">
+  <h3 class="mb-5 ml-5" ><br>
+    <fa name="home"></fa> Dashboard<hr>
+  </h3>
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+  <div class="alert alert-warning" *ngIf="!skills || skills.length==0">
+    <fa name="exclamation-triangle"></fa> No skills added yet!
+  </div>
+</div>
+</div>
+</div>
+
+ <div class="container">
+
+  <div class="row">
+    <div class="col-sm mb-4">
+      <div class="card shadow-lg bg-light" style="font-size: 16px !important;" (mouseover)="ep.hidden=false" (mouseleave)="ep.hidden=true">
+        <div class="card-body">
+            <h6 class="card-title" style="font-size: 18px;font-weight: bold;">My Profile</h6>
+            <hr>
+            <p class=" card-body w3-light-gray text-dark" style="font-size: 16px;">
+              
+              <fa name="vcard"></fa> {{employee.employeeName}} <br><br>
+              <fa name="bank"></fa> {{employee.department}} <br> <br>
+              <fa name="suitcase"></fa> {{employee.designation}} <br><br>
+              <fa name="envelope"></fa> {{employee.emailId}} <br><br>
+              <fa name="phone"></fa> {{employee.mobileNumber}} <br> <br>
+              <fa name="fort-awesome"></fa> {{employee.company}} <br><br>
+            </p>
+        </div>
+        <div class="card-footer text-center" hidden="true" #ep>
+
+            <div class="nav-item ml-2">
+              <a class="nav-link text-dark w3-khaki rounded" routerLink="editProfile">
+                <fa name="pencil"></fa>
+                Edit Profile
+              </a>
+            </div>
+           
+          </div>
+      </div>
+    </div>
+    <div class="col-sm mb-4">
+      <div class="card shadow-lg bg-light" style="font-size: 16px !important;" (mouseover)="pf.hidden=false" (mouseleave)="pf.hidden=true">
+        <div class="card-body">
+          <h6 class="card-title" style="font-size: 18px;font-weight: bold;">My Skills</h6>
+          <hr>
+          <p class="card-text card-body w3-light-gray text-dark" style="font-weight: bold;">
+            Total Skills : {{empSkills.length}}
+          </p>
+
+        </div>
+        <div class="card-footer text-center" hidden="true" #pf>
+
+          <div class="nav-item ml-2">
+            <a class="nav-link text-dark w3-khaki rounded" routerLink="addSkill">
+              <fa name="plus"></fa>
+              Add Skill
+            </a>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-sm mb-4">
+        <div class="card shadow-lg bg-light" style="font-size: 16px !important;">
+          <div class="card-body">
+              <h6 class="card-title" style="font-size: 18px;font-weight: bold;">My Requests</h6>
+              <hr>
+              <div class=" card-body w3-light-gray text-dark" style="font-size: 16px;">
+                  <table class="table table-borderless">
+                      <thead>
+                        <tr >
+                          <th class="text-dark" style="font-size: 18px; font-weight: bold;" scope="col">Id</th>
+                          <th class="text-dark" style="font-size: 18px; font-weight: bold;" scope="col">Skill Name</th>
+                          <th class="text-dark" style="font-size: 18px; font-weight: bold;" scope="col">Status</th>
+                          <th class="text-dark" style="font-size: 18px; font-weight: bold;" scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <ng-container>
+                            <tr *ngFor="let req of skillRequests">
+                                <th scope="row">{{req.requestId}}</th>
+                                <td>{{req.skillRequestedName}}</td>
+                                <td>{{req.status}}</td>
+                                <td><button class="btn btn-danger" (click)="doDelete(req.requestId)">Delete</button></td>
+                              </tr>
+                        </ng-container>
+                    </table>
+                  </div>
+          </div>
+        </div>
+      </div>
+      </div>
+</div>

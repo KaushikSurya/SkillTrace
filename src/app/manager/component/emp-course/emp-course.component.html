@@ -1,0 +1,90 @@
+<div class="bg" [ngStyle]="{'background' : 'url(../../../assets/images/13.jpeg)'}">
+<div class="container mt-2">
+    <div class="row">
+      <div class="col-sm-9 m-auto">
+        <h3 class="mb-5 mt-5"> 
+           Recommend Course</h3>
+           <!-- <p>
+             {{employee.employeeId}}
+           </p> -->
+    <!--  
+           <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  Employee Id & Name
+                </span>
+              </div>
+              <table>
+              <tr>
+                <td>{{employee.employeeId}}</td>
+                <td>{{employee.employeeName}}</td>
+              </tr>
+              </table>
+            </div>
+          -->
+        <form class="form" #f="ngForm" novalidate (ngSubmit)="f.valid && save()">
+          <!--
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  Employee Id & Name
+                </span>
+              </div>
+              <input type="text" class="form-control" id="eid" name="eid" required minlength="5" maxlength="15"
+                [(ngModel)]="courseEmp.employeeId" #cid=ngModel readonly />
+              <input type="text" class="form-control" id="enm" name="enm" required minlength="5" maxlength="25"
+                [(ngModel)]="courseEmp.employeeName" #cnm=ngModel readonly />
+            </div>
+            <div class="alert alert-danger" *ngIf="(eid.errors && (eid.touched || cid.darty))||(enm.errors && (enm.touched || enm.darty))">
+              <p *ngIf="(enm.errors && (enm.touched || enm.darty))">Please see that Name <strong>
+                  <span *ngIf="lnm.errors.required">is not left blank</span>
+                  <span *ngIf="lnm.errors.minlength">is atleast 5 chars in length</span>
+                </strong>
+              </p>
+            </div>
+          </div>
+        -->
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  SkillId
+                </span>
+              </div>
+              <input type="number" class="form-control" id="sid" name="sid" required minlength="5" maxlength="15"
+                [(ngModel)]="courseEmp.skillId" #sid=ngModel  />
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  Skill Name
+                </span>
+              </div>
+              <input type="text" class="form-control" id="sname" name="sname" 
+              [(ngModel)]="courseEmp.skillName" #sname=ngModel   />
+              </div>
+          </div>
+          <div class="mb-3">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">
+                    Status
+                  </span>
+                </div>
+                <select id="mat" name="mat" [(ngModel)]="courseEmp.status" #mat=ngModel >
+                  <option value="Mandatory">Mandatory</option>
+                  <option value="Optional">Optional</option>
+                </select>  
+               </div>
+          </div>
+          <div>
+            <button class="btn btn-block btn-info">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

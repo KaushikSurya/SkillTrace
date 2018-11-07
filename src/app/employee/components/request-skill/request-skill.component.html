@@ -1,0 +1,61 @@
+<div class="container shadow-lg w3-light-gray rounded" style="padding:20px;">
+    <h3 class="mb-5 ml-5 text-dark" ><br>
+      <fa name="paper-plane" class="shadow-lg"></fa> Request Skill<hr>
+    </h3>
+<div class="container">
+      <form class="form card w3-light-gray border-0 p-5" #f="ngForm" novalidate (ngSubmit)="f.valid && save()">
+
+
+        <div class="mb-3">
+          <div class="input-group">
+            <div id="employeeId" name="employeeId" [(ngModel)]="skill.employeeId" #employeeId=ngModel>
+            </div>
+            <div id="employeeName" name="employeeName" [(ngModel)]="skill.employeeName" #employeeName=ngModel>
+            </div>
+            <div id="status" name="status" [(ngModel)]="skill.status" #status=ngModel>
+              </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+            <h5>Select Skill</h5><hr>
+          <div class="input-group text-dark w3-light-gray rounded">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <fa name="graduation-cap"></fa>
+              </span>
+              <pre> </pre>
+            </div>
+
+              <ng-container>
+                  <select class="form-control p-2 m-2" id="skillId" name="skillId" #skillId=ngModel [(ngModel)]="skill.skillRequestedId">
+                    
+                    <option *ngFor="let sk of skillList"  [attr.value]="sk.skillId">{{sk.skillId}} {{sk.skillName}}
+                    </option>
+                  </select>
+                </ng-container>
+            <ng-container>
+              <!-- <button type="button" class="btn btn-outline-success p-2 m-2">{{sk.skillName}}</button> -->
+
+              <select class="form-control p-2 m-2" id="skillName" name="skillName" #skillName=ngModel [(ngModel)]="skill.skillRequestedName">
+                
+                <option *ngFor="let sk of skillList"  [attr.value]="sk.skillName">{{sk.skillName}}
+                </option>
+              </select>
+            </ng-container>
+
+
+          </div>
+        </div>
+        <br>
+        <br>
+        
+        <br>
+        <div>
+          <button class="btn btn-block btn-dark">Save</button>
+     
+          <br>
+        </div>
+      </form>
+    </div>
+    </div>

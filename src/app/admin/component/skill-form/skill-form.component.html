@@ -1,0 +1,28 @@
+<h3>{{isEdit?"Edit":"New"}} Skill </h3>
+
+<table>
+    <tr>  
+        <th>Skill#</th>  
+        <td>
+          <input type="number" [(ngModel)]="skill.skillId" *ngIf="!isEdit"/>
+          <span *ngIf="isEdit">{{skill.skillId}}</span>
+        </td>
+    </tr>
+    <tr>  
+        <th>Name</th>  
+        <td><input type="text" [(ngModel)] = "skill.skillName" /></td>
+    </tr>
+    <tr>  
+        <th>Specialization</th>  
+        <td><input type="text" [(ngModel)] = "skill.specialization" /></td>
+    </tr>
+    <tr>  
+        <th>Score</th> 
+        <td><input type="decimal" [(ngModel)] = "skill.score" /></td>
+    </tr>
+    <tr>
+        <td colspan="2" style="text-align:center;">
+            <button (click)="saveSkill()">Save</button> 
+        </td>
+    </tr>
+    </table>

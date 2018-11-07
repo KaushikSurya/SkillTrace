@@ -1,0 +1,95 @@
+<!-- <div class="input-group-prepend">
+  <div class="btn-group" >
+    <button class="btn btn-secondary" (click)="employee()">Recommend Course to Employee </button>
+  </div>
+  &nbsp;
+  <div class="btn-group" >
+      <button class="btn btn-secondary" (click)= "Add()">Recommend New Course </button>
+    </div>
+</div>      
+<div *ngIf ="emp">
+  <table class="table"> 
+      <thead class="thead-dark">   
+         <tr>     
+              <th>Employee Id</th> 
+              <th>Employee Name</th>
+              <th>Department </th>
+              <th>Company</th> 
+              <th></th>
+      
+         </tr>  
+       </thead>
+       <tbody>  
+           <th scope="row"></th> 
+       <tr *ngFor="let c of employees">     
+              <td>{{c.employeeId}}</td>
+              <td>{{c.employeeName}}</td>
+              <td>{{c.dept}}</td>
+              <td>{{c.company}}</td> 
+              <td><a  routerLink="/empCourse/{{c.employeeId}}/{{c.employeeName}}"><button class="btn btn-secondary" >Recommend</button></a></td> 
+      </tr> 
+     </tbody> 
+   </table> 
+</div> -->
+<div>
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-sm-9 m-auto">
+      <h3 class="mb-5 mt-5"> 
+         New Course Recommend</h3>
+     <form class="form" #f="ngForm" novalidate (ngSubmit)="f.valid && save()">
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                Manager Id
+              </span>
+            </div>
+            <input type="number" class="form-control" id="mid" name="mid" required minlength="5" maxlength="15"
+              [(ngModel)]="magReq.managerId" #mid=ngModel  />
+          </div>
+        </div>
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                Manager Name
+              </span>
+            </div>
+            <input type="text" class="form-control" id="mname" name="mname" 
+            [(ngModel)]="magReq.managerName" #mname=ngModel   />
+            </div>
+        </div>
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                Course Name
+              </span>
+            </div>
+            <input type="text" class="form-control" id="sname" name="sname" 
+            [(ngModel)]="magReq.courseName" #sname=ngModel   />
+            </div>
+        </div>
+        <div class="mb-3">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                Course Description
+              </span>
+            </div>
+            <textarea type="text" rows='5' cols='10' class="form-control" id="dname" name="dname" 
+            [(ngModel)]="magReq.description" #dname=ngModel   ></textarea>
+            </div>
+        </div>
+
+      
+        <div>
+          <button class="btn btn-block btn-primary">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+</div>
